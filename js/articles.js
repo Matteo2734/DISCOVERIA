@@ -126,7 +126,7 @@ const articles = [
     image: 'images/mecanica-cuantica.jpg',
     url: 'articles/que-es-la-mecanica-cuantica.html',
     tags: ['cuántica', 'partículas', 'física', 'probabilidad'],
-    featured: true,
+    featured: false,
     author: 'Equipo DISCOVERIA'
   },
   {
@@ -155,6 +155,20 @@ const articles = [
     url: 'articles/como-nacio-el-universo.html',
     tags: ['big bang', 'cosmología', 'universo', 'astronomía'],
     featured: false,
+    author: 'Equipo DISCOVERIA'
+  },
+  {
+    id: 'cerebro-decide-antes-que-tu',
+    title: '¿Tu cerebro decide antes que tú?',
+    category: 'Neurociencia',
+    categoryId: 'neurociencia',
+    date: '2026-08-12',
+    readingTime: '7 min',
+    description: '¿Tomamos decisiones conscientemente o nuestro cerebro comienza a decidir antes de que seamos conscientes? Exploramos los experimentos de Libet, la actividad cerebral y el libre albedrío.',
+    image: 'images/cerebro-decide.jpg',
+    url: 'articles/cerebro-decide-antes-que-tu.html',
+    tags: ['neurociencia', 'libre albedrío', 'decisión', 'conciencia'],
+    featured: true,
     author: 'Equipo DISCOVERIA'
   }
 ];
