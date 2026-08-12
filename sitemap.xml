@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Página principal -->
+    <url>
+        <loc>https://discoveria-site.netlify.app/</loc>
+    </url>
+
+    <!-- Página de artículos -->
+    <url>
+        <loc>https://discoveria-site.netlify.app/articles.html</loc>
+    </url>
+
+    <!-- Páginas generales -->
+    <url>
+        <loc>https://discoveria-site.netlify.app/about.html</loc>
+    </url>
+
+    <url>
+        <loc>https://discoveria-site.netlify.app/contact.html</loc>
+    </url>
+
+    <url>
+        <loc>https://discoveria-site.netlify.app/privacy.html</loc>
+    </url>
+
+    <url>
+        <loc>https://discoveria-site.netlify.app/terms.html</loc>
+    </url>
+
+    <!-- Artículos -->
+    <url>
+        <loc>https://discoveria-site.netlify.app/articles/agujeros-negros.html</loc>
+    </url>
+
+    <url>
+        <loc>https://discoveria-site.netlify.app/articles/cielo-azul.html</loc>
+    </url>
+
+    <url>
+        <loc>https://discoveria-site.netlify.app/articles/como-funciona-la-gravedad.html</loc>
+    </url>
+
+    <url>
+        <loc>https://discoveria-site.netlify.app/articles/como-funciona-el-adn.html</loc>
+    </url>
+
+    <url>
+        <loc>https://discoveria-site.netlify.app/articles/como-funciona-una-red-neuronal.html</loc>
+    </url>
+
+    <url>
+        <loc>https://discoveria-site.netlify.app/articles/como-nacio-el-universo.html</loc>
+    </url>
+
+    <url>
+        <loc>https://discoveria-site.netlify.app/articles/estrellas.html</loc>
+    </url>
+
+    <url>
+        <loc>https://discoveria-site.netlify.app/articles/por-que-ocurren-los-terremotos.html</loc>
+    </url>
+
+    <url>
+        <loc>https://discoveria-site.netlify.app/articles/que-es-la-mecanica-cuantica.html</loc>
+    </url>
+
+    <url>
+        <loc>https://discoveria-site.netlify.app/articles/que-es-una-celula.html</loc>
+    </url>
+
+    <url>
+        <loc>https://discoveria-site.netlify.app/articles/relatividad.html</loc>
+    </url>
+
+</urlset>

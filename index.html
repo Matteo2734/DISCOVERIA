@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DISCOVERIA — Revista de divulgación científica</title>
+  <meta name="description" content="Explora las ideas, descubrimientos y preguntas que nos ayudan a entender el universo. Divulgación científica en español.">
+  <meta property="og:title" content="DISCOVERIA — Revista de divulgación científica">
+  <meta property="og:description" content="Explora las ideas, descubrimientos y preguntas que nos ayudan a entender el universo.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tudominio.com">
+  <meta property="og:locale" content="es_ES">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="DISCOVERIA — Inicio">
+        <span class="logo-icon" aria-hidden="true"></span>
+        <span data-site-name>DISCOVERIA</span>
+      </a>
+      <nav class="main-nav" role="navigation" aria-label="Navegación principal">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="articles.html">Explorar</a></li>
+          <li><a href="about.html">Sobre nosotros</a></li>
+        </ul>
+        <div class="search-wrapper">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input type="search" class="search-input" placeholder="Buscar artículos..." aria-label="Buscar artículos">
+        </div>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-overlay" aria-hidden="true"></div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" aria-label="Presentación">
+      <div class="hero-bg">
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero-gradient"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-orbit hero-orbit--1" aria-hidden="true"></div>
+        <div class="hero-orbit hero-orbit--2" aria-hidden="true"></div>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <span class="hero-label">Divulgación científica</span>
+          <h1 class="hero-title">DISCOVERIA</h1>
+          <p class="hero-subtitle">Explora las ideas, descubrimientos y preguntas que nos ayudan a entender el mundo.</p>
+          <div class="hero-actions">
+            <a href="articles.html" class="btn btn-primary">Explorar ciencia</a>
+            <a href="articles.html" class="btn btn-outline">Últimos artículos</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="hero-scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- Artículo destacado -->
+    <section class="section featured-section" aria-labelledby="featured-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Destacado</span>
+          <h2 id="featured-heading" class="section-title-1">Artículo de la semana</h2>
+        </div>
+        <div id="featured-article"></div>
+      </div>
+    </section>
+
+    <!-- Categorías -->
+    <section class="section categories-section" id="categorias" aria-labelledby="categories-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Disciplinas</span>
+          <h2 id="categories-heading" class="section-title">Explora la ciencia</h2>
+          <p class="section-subtitle">Ocho campos del conocimiento, infinitas preguntas por responder.</p>
+        </div>
+        <div id="categories-grid" class="categories-grid"></div>
+      </div>
+    </section>
+
+    <!-- Artículos recientes -->
+    <section class="section" aria-labelledby="recent-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Reciente</span>
+          <h2 id="recent-heading" class="section-title-2">Últimas ideas</h2>
+        </div>
+        <div id="recent-articles" class="recent-grid"></div>
+        <div class="text-center mt-2 reveal">
+          <a href="articles.html" class="btn btn-outline">Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ad slot (preparado) -->
+    <div class="ad-slot container" aria-hidden="true"></div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-icon" aria-hidden="true"></span>
+            <span data-site-name>DISCOVERIA</span>
+          </a>
+          <p data-site-description>Revista digital de divulgación científica en español.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Twitter" title="Twitter">𝕏</a>
+            <a href="#" aria-label="Instagram" title="Instagram">◎</a>
+            <a href="#" aria-label="YouTube" title="YouTube">▶</a>
+            <a href="#" aria-label="GitHub" title="GitHub">{ }</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer-heading">Categorías</h3>
+          <ul class="footer-links" id="footer-categories"></ul>
+        </div>
+        <div>
+          <h3 class="footer-heading">Proyecto</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">Sobre nosotros</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+            <li><a href="articles.html">Explorar</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-heading">Legal</h3>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacidad</a></li>
+            <li><a href="terms.html">Términos</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 <span data-site-name>DISCOVERIA</span>. Todos los derechos reservados.</span>
+        <span>Hecho con curiosidad científica</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/articles.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

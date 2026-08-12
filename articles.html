@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explora la ciencia — DISCOVERIA</title>
+  <meta name="description" content="Explora todos los artículos de divulgación científica. Filtra por categoría o busca por tema.">
+  <meta property="og:title" content="Explora la ciencia — DISCOVERIA">
+  <meta property="og:description" content="Todos los artículos de divulgación científica en un solo lugar.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="DISCOVERIA — Inicio">
+        <span class="logo-icon" aria-hidden="true"></span>
+        <span data-site-name>DISCOVERIA</span>
+      </a>
+      <nav class="main-nav" role="navigation" aria-label="Navegación principal">
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="articles.html" class="active">Explorar</a></li>
+          <li><a href="about.html">Sobre nosotros</a></li>
+        </ul>
+        <div class="search-wrapper">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input type="search" class="search-input" placeholder="Buscar artículos..." aria-label="Buscar artículos">
+        </div>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-overlay" aria-hidden="true"></div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header-content reveal">
+          <span class="section-label">Biblioteca</span>
+          <h1>Explora la ciencia</h1>
+          <p class="section-subtitle-1">Todos nuestros artículos, organizados para que encuentres lo que te interesa.</p>
+        </div>
+
+        <div class="filter-bar reveal" role="group" aria-label="Filtrar por categoría">
+          <button class="filter-btn active" data-category="todos">Todos</button>
+          <button class="filter-btn" data-category="fisica">Física</button>
+          <button class="filter-btn" data-category="astronomia">Astronomía</button>
+          <button class="filter-btn" data-category="biologia">Biología</button>
+          <button class="filter-btn" data-category="quimica">Química</button>
+          <button class="filter-btn" data-category="matematicas">Matemáticas</button>
+          <button class="filter-btn" data-category="neurociencia">Neurociencia</button>
+          <button class="filter-btn" data-category="tierra">Tierra</button>
+          <button class="filter-btn" data-category="tecnologia">Tecnología</button>
+        </div>
+
+        <div id="articles-grid" class="articles-grid"></div>
+      </div>
+    </section>
+
+    <div class="ad-slot container" aria-hidden="true"></div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-icon" aria-hidden="true"></span>
+            <span data-site-name>NEBULA</span>
+          </a>
+          <p data-site-description>Revista digital de divulgación científica en español.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Twitter">𝕏</a>
+            <a href="#" aria-label="Instagram">◎</a>
+            <a href="#" aria-label="YouTube">▶</a>
+            <a href="#" aria-label="GitHub">{ }</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer-heading">Categorías</h3>
+          <ul class="footer-links" id="footer-categories"></ul>
+        </div>
+        <div>
+          <h3 class="footer-heading">Proyecto</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">Sobre nosotros</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+            <li><a href="articles.html">Explorar</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-heading">Legal</h3>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacidad</a></li>
+            <li><a href="terms.html">Términos</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 <span data-site-name>DISCOVERIA</span>. Todos los derechos reservados.</span>
+        <span>Hecho con curiosidad científica</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/articles.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto — DISCOVERIA</title>
+  <meta name="description" content="Contacta con el equipo de DISCOVERIA. Sugerencias, correcciones e ideas para artículos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo"><span class="logo-icon" aria-hidden="true"></span><span data-site-name>DISCOVERIA</span></a>
+      <nav class="main-nav" role="navigation" aria-label="Navegación principal">
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="articles.html">Explorar</a></li>
+          <li><a href="about.html">Sobre nosotros</a></li>
+        </ul>
+        <div class="search-wrapper">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input type="search" class="search-input" placeholder="Buscar artículos..." aria-label="Buscar artículos">
+        </div>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav-overlay" aria-hidden="true"></div>
+  </header>
+
+  <main class="page-content">
+    <div class="container">
+      <article class="content-block reveal">
+        <span class="section-label">Hablemos</span>
+        <h1>Contacto</h1>
+        <p>¿Tienes una pregunta, sugerencia o idea para un artículo? Nos encantaría escucharte.</p>
+        <p>Puedes escribirnos directamente a <a href="mailto:discoveria.support@gmail.com" data-site-email>discoveria.support@gmail.com</a></p>
+
+        <form action="https://formspree.io/f/xoeadqgp" method="POST" id="contact-form" class="contact-form" action="#" method="post">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+        </form>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none;padding-top:0;">
+        <span>© 2026 <span data-site-name>DISCOVERIA</span></span>
+        <span><a href="privacy.html">Privacidad</a> · <a href="terms.html">Términos</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/articles.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    const contactForm = document.getElementById('contact-form');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const submitButton = contactForm.querySelector('button[type="submit"], input[type="submit"]');
+        const originalText = submitButton ? submitButton.textContent : '';
+
+        if (submitButton) {
+          submitButton.disabled = true;
+          submitButton.textContent = 'Enviando...';
+        }
+
+        try {
+          const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: new FormData(contactForm),
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (response.ok) {
+            contactForm.reset();
+            alert('¡Mensaje enviado correctamente! Gracias por escribir a DISCOVERIA.');
+          } else {
+            alert('No se pudo enviar el mensaje. Inténtalo de nuevo.');
+          }
+        } catch (error) {
+          alert('Ocurrió un error de conexión. Comprueba tu conexión a internet e inténtalo de nuevo.');
+        } finally {
+          if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.textContent = originalText || 'Enviar mensaje';
+          }
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

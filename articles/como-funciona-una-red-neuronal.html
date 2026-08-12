@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>¿Cómo funciona una red neuronal? — DISCOVERIA</title>
+
+  <meta name="description" content="Descubre cómo funcionan las redes neuronales artificiales, cómo aprenden a partir de datos y qué papel desempeñan las neuronas, los pesos y las funciones de activación.">
+
+  <meta property="og:title" content="¿Cómo funciona una red neuronal? — DISCOVERIA">
+  <meta property="og:description" content="Descubre cómo una red neuronal artificial procesa información, aprende patrones y realiza predicciones a partir de datos.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://tudominio.com/articles/como-funciona-una-red-neuronal.html">
+  <meta property="og:image" content="https://tudominio.com/images/red-neuronal.jpg">
+  <meta property="og:locale" content="es_ES">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/article.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+  <div class="reading-progress" aria-hidden="true"></div>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a href="../index.html" class="logo" aria-label="DISCOVERIA — Inicio">
+        <span class="logo-icon" aria-hidden="true"></span>
+        <span data-site-name>DISCOVERIA</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" role="navigation" aria-label="Navegación principal">
+
+        <ul class="nav-links">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="../articles.html">Explorar</a></li>
+          <li><a href="../about.html">Sobre nosotros</a></li>
+        </ul>
+
+        <div class="search-wrapper">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+
+          <input
+            type="search"
+            class="search-input"
+            placeholder="Buscar artículos..."
+            aria-label="Buscar artículos"
+          >
+        </div>
+
+      </nav>
+
+      <button
+        class="menu-toggle"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="main-nav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+    <div class="nav-overlay" aria-hidden="true"></div>
+  </header>
+
+
+  <main class="article-page">
+
+    <div class="container">
+
+      <nav class="breadcrumb" aria-label="Ruta de navegación">
+        <ol>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="../articles.html?category=tecnologia">Tecnología</a></li>
+          <li aria-current="page">¿Cómo funciona una red neuronal?</li>
+        </ol>
+      </nav>
+
+
+      <header class="article-header">
+
+        <span class="category-tag">Tecnología</span>
+
+        <h1 class="article-title">¿Cómo funciona una red neuronal?</h1>
+
+        <p class="article-subtitle">
+          Las redes neuronales son modelos computacionales capaces de aprender patrones
+          a partir de datos. Su funcionamiento está inspirado, de manera simplificada,
+          en algunas características de las redes neuronales biológicas.
+        </p>
+
+        <div class="article-meta">
+          <time datetime="2026-08-10">10 de agosto de 2026</time>
+          <span class="meta-divider">·</span>
+          <span>Equipo DISCOVERIA</span>
+          <span class="meta-divider">·</span>
+          <span>9 min de lectura</span>
+        </div>
+
+      </header>
+
+
+      <figure class="article-hero-image">
+        <img
+          src="../images/red-neuronal.jpg"
+          alt="Representación de una red neuronal artificial"
+        >
+      </figure>
+
+
+      <article class="article-body">
+
+        <p>
+          Hoy en día, las redes neuronales aparecen detrás de muchas tecnologías que
+          utilizamos diariamente. Pueden ayudar a reconocer imágenes, interpretar texto,
+          traducir idiomas, detectar patrones y realizar predicciones.
+        </p>
+
+        <p>
+          Pero ¿cómo puede un programa aprender algo a partir de datos?
+        </p>
+
+        <p>
+          La respuesta está en una estructura matemática formada por unidades de cálculo
+          conectadas entre sí. Estas unidades reciben información, realizan operaciones
+          matemáticas y transmiten sus resultados a otras unidades.
+        </p>
+
+        <p>
+          A este tipo de modelo lo conocemos como <strong>red neuronal artificial</strong>.
+        </p>
+
+
+        <h2>¿Qué es una red neuronal?</h2>
+
+        <p>
+          Una red neuronal artificial es un modelo matemático y computacional diseñado
+          para aprender relaciones y patrones a partir de ejemplos.
+        </p>
+
+        <p>
+          Una red puede recibir determinados datos como entrada y producir una salida.
+          Por ejemplo, podría recibir los valores de los píxeles de una imagen y producir
+          una predicción sobre qué objeto aparece en ella.
+        </p>
+
+        <p>
+          Para conseguirlo, la red contiene numerosos parámetros llamados
+          <strong>pesos</strong>, que determinan cómo influye una entrada sobre el resultado.
+        </p>
+
+        <div class="info-box">
+          <h4>La idea fundamental</h4>
+          <p>
+            Una red neuronal no recibe una lista explícita de todas las reglas que debe
+            seguir. Durante el entrenamiento, modifica sus parámetros para encontrar
+            relaciones útiles entre los datos de entrada y las respuestas deseadas.
+          </p>
+        </div>
+
+
+        <h2>La inspiración biológica</h2>
+
+        <p>
+          El nombre "red neuronal" proviene de su inspiración en el funcionamiento de las
+          <strong>neuronas biológicas</strong>.
+        </p>
+
+        <p>
+          En el sistema nervioso, las neuronas reciben señales, las procesan y pueden
+          transmitir información a otras neuronas.
+        </p>
+
+        <p>
+          Las redes neuronales artificiales utilizan una idea mucho más simple:
+          pequeñas unidades matemáticas conectadas entre sí pueden combinar información
+          para producir resultados complejos.
+        </p>
+
+        <p>
+          Sin embargo, una red neuronal artificial no es una réplica exacta de un cerebro.
+          Es un modelo matemático inspirado parcialmente en algunas de sus características.
+        </p>
+
+
+        <h2>La neurona artificial</h2>
+
+        <p>
+          La unidad básica de una red neuronal artificial suele llamarse
+          <strong>neurona</strong>, aunque también puede encontrarse como nodo o unidad.
+        </p>
+
+        <p>
+          Una neurona recibe varias entradas, multiplica cada una por un peso, suma los
+          resultados y aplica una función de activación.
+        </p>
+
+        <p class="equation">
+          z = w₁x₁ + w₂x₂ + ... + wₙxₙ + b
+        </p>
+
+        <p>
+          En esta expresión, las variables <strong>x</strong> representan las entradas,
+          las variables <strong>w</strong> representan los pesos y <strong>b</strong>
+          es el sesgo o <em>bias</em>.
+        </p>
+
+        <p>
+          Después, el resultado pasa por una función de activación:
+        </p>
+
+        <p class="equation">
+          y = f(z)
+        </p>
+
+        <p>
+          De esta manera, una neurona transforma varias entradas en una nueva salida.
+        </p>
+
+
+        <h2>¿Qué son los pesos?</h2>
+
+        <p>
+          Los <strong>pesos</strong> determinan cuánto influye cada entrada sobre el
+          resultado de una neurona.
+        </p>
+
+        <p>
+          Un peso grande en valor absoluto puede hacer que una determinada entrada tenga
+          una influencia considerable, mientras que un peso cercano a cero puede hacer
+          que su influencia sea pequeña.
+        </p>
+
+        <p>
+          Lo importante es que estos valores no tienen que ser establecidos manualmente.
+          Durante el entrenamiento, la red puede ajustarlos utilizando los datos disponibles.
+        </p>
+
+
+        <h2>¿Qué es el sesgo?</h2>
+
+        <p>
+          Además de los pesos, las neuronas suelen tener otro parámetro llamado
+          <strong>sesgo</strong> o <em>bias</em>.
+        </p>
+
+        <p>
+          El sesgo permite desplazar el resultado de la combinación de entradas antes
+          de aplicar la función de activación.
+        </p>
+
+        <p>
+          En conjunto, pesos y sesgos proporcionan a la red una gran cantidad de parámetros
+          que puede ajustar durante el aprendizaje.
+        </p>
+
+
+        <h2>Las funciones de activación</h2>
+
+        <p>
+          Si una red neuronal únicamente realizara sumas y multiplicaciones lineales,
+          tendría capacidades muy limitadas.
+        </p>
+
+        <p>
+          Por eso se utilizan <strong>funciones de activación no lineales</strong>.
+          Estas permiten que la red pueda representar relaciones mucho más complejas.
+        </p>
+
+        <p>
+          Algunas funciones de activación conocidas son <strong>ReLU</strong>,
+          <strong>sigmoide</strong> y <strong>tanh</strong>.
+        </p>
+
+        <p>
+          Una función ReLU, por ejemplo, puede expresarse como:
+        </p>
+
+        <p class="equation">
+          ReLU(x) = max(0, x)
+        </p>
+
+        <p>
+          Estas funciones permiten que las diferentes capas de una red construyan
+          transformaciones progresivamente más complejas.
+        </p>
+
+
+        <h2>Las capas de una red neuronal</h2>
+
+        <p>
+          Las neuronas artificiales suelen organizarse en <strong>capas</strong>.
+        </p>
+
+        <p>
+          Una estructura sencilla puede contener una capa de entrada, una o varias capas
+          ocultas y una capa de salida.
+        </p>
+
+        <p class="equation">
+          Entrada → Capas ocultas → Salida
+        </p>
+
+        <p>
+          La <strong>capa de entrada</strong> recibe los datos.
+        </p>
+
+        <p>
+          Las <strong>capas ocultas</strong> transforman progresivamente esa información.
+        </p>
+
+        <p>
+          Finalmente, la <strong>capa de salida</strong> produce el resultado que nos interesa.
+        </p>
+
+
+        <h2>¿Por qué necesitamos muchas capas?</h2>
+
+        <p>
+          Una sola capa puede aprender determinadas relaciones, pero las redes profundas
+          pueden construir representaciones jerárquicas.
+        </p>
+
+        <p>
+          Por ejemplo, al analizar una imagen, las primeras capas pueden detectar patrones
+          relativamente sencillos, mientras que capas posteriores pueden combinar esos
+          patrones para representar estructuras más complejas.
+        </p>
+
+        <p>
+          Este principio es una de las bases del <strong>aprendizaje profundo</strong>
+          o <em>deep learning</em>.
+        </p>
+
+
+        <h2>¿Cómo aprende una red neuronal?</h2>
+
+        <p>
+          Una red neuronal aprende mediante un proceso llamado <strong>entrenamiento</strong>.
+        </p>
+
+        <p>
+          Durante el entrenamiento, la red recibe ejemplos y produce predicciones.
+          Después, se compara la predicción con la respuesta esperada.
+        </p>
+
+        <p>
+          La diferencia entre ambas se utiliza para calcular una medida llamada
+          <strong>función de pérdida</strong>.
+        </p>
+
+        <p>
+          El objetivo del entrenamiento es modificar los pesos y sesgos para reducir
+          progresivamente esa pérdida.
+        </p>
+
+
+        <h2>La función de pérdida</h2>
+
+        <p>
+          La función de pérdida cuantifica qué tan diferente es la predicción de la red
+          respecto al resultado esperado.
+        </p>
+
+        <p>
+          Por ejemplo, si una red intenta predecir el precio de una vivienda y produce
+          una estimación muy diferente al precio real, la pérdida será mayor.
+        </p>
+
+        <p>
+          Si sus predicciones se acercan a los valores correctos, la pérdida puede disminuir.
+        </p>
+
+        <p>
+          Existen diferentes funciones de pérdida dependiendo del problema que se quiera
+          resolver.
+        </p>
+
+
+        <h2>El descenso del gradiente</h2>
+
+        <p>
+          Para modificar los parámetros de la red se utilizan algoritmos de optimización.
+          Uno de los conceptos fundamentales es el <strong>descenso del gradiente</strong>.
+        </p>
+
+        <p>
+          La idea consiste en utilizar información sobre cómo cambia la función de pérdida
+          cuando cambian los parámetros.
+        </p>
+
+        <p>
+          Si representamos todos los parámetros de la red mediante un vector θ, una regla
+          sencilla de actualización puede escribirse como:
+        </p>
+
+        <p class="equation">
+          θ ← θ − η∇L(θ)
+        </p>
+
+        <p>
+          Aquí, <strong>L</strong> representa la función de pérdida, <strong>∇L</strong>
+          es su gradiente y <strong>η</strong> es la tasa de aprendizaje.
+        </p>
+
+        <p>
+          La actualización intenta mover los parámetros hacia una región donde la pérdida
+          sea menor.
+        </p>
+
+
+        <h2>¿Qué es la retropropagación?</h2>
+
+        <p>
+          Para entrenar redes con muchas capas se utiliza habitualmente un procedimiento
+          llamado <strong>retropropagación</strong> o <em>backpropagation</em>.
+        </p>
+
+        <p>
+          Primero, la información atraviesa la red desde la entrada hasta la salida.
+          Este proceso se conoce como <strong>propagación hacia adelante</strong>.
+        </p>
+
+        <p>
+          Después se calcula la pérdida y se determina cómo contribuyeron los diferentes
+          parámetros al error.
+        </p>
+
+        <p>
+          Utilizando la regla de la cadena del cálculo diferencial, la información sobre
+          esos cambios puede propagarse hacia atrás a través de las capas.
+        </p>
+
+        <p>
+          De esta manera, el algoritmo puede calcular los gradientes necesarios para
+          actualizar los pesos y sesgos.
+        </p>
+
+
+        <div class="info-box">
+          <h4>En pocas palabras</h4>
+          <p>
+            La red hace una predicción → calcula qué tan equivocada fue →
+            determina cómo cambiar sus parámetros → actualiza esos parámetros →
+            vuelve a intentarlo.
+          </p>
+        </div>
+
+
+        <h2>Un ejemplo sencillo</h2>
+
+        <p>
+          Imaginemos una red que intenta determinar si una imagen contiene un gato.
+        </p>
+
+        <p>
+          La imagen puede convertirse en una colección de valores numéricos que representan
+          sus píxeles. Estos valores se introducen en la red.
+        </p>
+
+        <p>
+          Las diferentes capas transforman esos valores y generan una predicción.
+        </p>
+
+        <p>
+          Supongamos que la red produce una probabilidad de 0.20 de que la imagen contenga
+          un gato, pero sabemos que la imagen sí contiene uno.
+        </p>
+
+        <p>
+          La función de pérdida cuantifica el error. Después, mediante retropropagación
+          y un algoritmo de optimización, los parámetros de la red se modifican ligeramente.
+        </p>
+
+        <p>
+          Después de repetir este proceso con muchos ejemplos, la red puede aprender
+          representaciones que le permitan reconocer patrones relacionados con gatos.
+        </p>
+
+
+        <h2>¿La red memoriza o realmente aprende?</h2>
+
+        <p>
+          Una red neuronal puede aprender patrones generales, pero también puede
+          <strong>sobreajustarse</strong> a los datos utilizados durante el entrenamiento.
+        </p>
+
+        <p>
+          El sobreajuste ocurre cuando el modelo aprende demasiado bien las características
+          particulares de los ejemplos de entrenamiento y pierde capacidad para generalizar
+          a datos nuevos.
+        </p>
+
+        <p>
+          Por esta razón, los modelos suelen evaluarse utilizando datos que no fueron usados
+          directamente durante el entrenamiento.
+        </p>
+
+
+        <h2>Entrenamiento y predicción</h2>
+
+        <p>
+          Es importante distinguir entre dos etapas.
+        </p>
+
+        <p>
+          Durante el <strong>entrenamiento</strong>, los parámetros de la red se modifican
+          utilizando ejemplos.
+        </p>
+
+        <p>
+          Durante la <strong>inferencia</strong>, la red utiliza los parámetros que ya
+          aprendió para producir resultados sobre nuevos datos.
+        </p>
+
+        <p>
+          Por ejemplo, un modelo de reconocimiento de imágenes puede pasar por millones
+          de ejemplos durante su entrenamiento y posteriormente utilizar lo aprendido para
+          clasificar imágenes que nunca había visto.
+        </p>
+
+
+        <h2>¿Qué es el aprendizaje profundo?</h2>
+
+        <p>
+          El <strong>aprendizaje profundo</strong> es un área del aprendizaje automático
+          que utiliza redes neuronales con múltiples capas para aprender representaciones
+          complejas de los datos.
+        </p>
+
+        <p>
+          Las redes profundas han demostrado ser especialmente útiles en áreas como visión
+          artificial, procesamiento del lenguaje natural, reconocimiento de voz y análisis
+          de diferentes tipos de datos.
+        </p>
+
+
+        <h2>Redes neuronales convolucionales</h2>
+
+        <p>
+          Para trabajar con imágenes se desarrollaron arquitecturas especializadas como
+          las <strong>redes neuronales convolucionales</strong> o CNN.
+        </p>
+
+        <p>
+          Estas redes utilizan operaciones de convolución para detectar patrones locales
+          en los datos.
+        </p>
+
+        <p>
+          Una red convolucional puede aprender progresivamente representaciones que van
+          desde características simples hasta estructuras visuales más complejas.
+        </p>
+
+
+        <h2>Redes neuronales recurrentes</h2>
+
+        <p>
+          Algunos tipos de datos tienen una estructura secuencial. Por ejemplo, una oración
+          está formada por palabras que aparecen en un determinado orden.
+        </p>
+
+        <p>
+          Las <strong>redes neuronales recurrentes</strong> fueron diseñadas para trabajar
+          con secuencias y mantener información relacionada con elementos anteriores.
+        </p>
+
+        <p>
+          Aunque actualmente existen arquitecturas más modernas para muchos problemas
+          secuenciales, las redes recurrentes fueron fundamentales en el desarrollo del
+          aprendizaje automático aplicado al lenguaje y a las series temporales.
+        </p>
+
+
+        <h2>Los transformers</h2>
+
+        <p>
+          Una arquitectura especialmente importante en la inteligencia artificial moderna
+          es el <strong>transformer</strong>.
+        </p>
+
+        <p>
+          Los transformers utilizan mecanismos de <strong>atención</strong> para determinar
+          qué partes de una secuencia son relevantes al procesar cada elemento.
+        </p>
+
+        <p>
+          Esta arquitectura ha sido fundamental para numerosos avances recientes en
+          procesamiento del lenguaje natural y también se ha aplicado a imágenes, audio,
+          código y otros tipos de información.
+        </p>
+
+
+        <h2>¿Por qué una red neuronal puede ser tan poderosa?</h2>
+
+        <p>
+          Una red neuronal puede contener desde miles hasta miles de millones de parámetros,
+          dependiendo de su arquitectura y propósito.
+        </p>
+
+        <p>
+          Cada parámetro puede contribuir de alguna manera a las transformaciones que
+          realiza el modelo.
+        </p>
+
+        <p>
+          La combinación de grandes cantidades de datos, arquitecturas adecuadas y capacidad
+          de cálculo permite entrenar modelos capaces de representar relaciones extremadamente
+          complejas.
+        </p>
+
+
+        <h2>Una máquina que aprende patrones</h2>
+
+        <p>
+          Una red neuronal no "piensa" exactamente como una persona. Su funcionamiento se
+          basa en operaciones matemáticas aplicadas a representaciones numéricas de los datos.
+        </p>
+
+        <p>
+          Sin embargo, mediante millones de parámetros ajustables, puede aprender
+          representaciones y relaciones que serían difíciles de programar explícitamente
+          mediante reglas tradicionales.
+        </p>
+
+        <p>
+          En esencia, una red neuronal transforma información paso a paso mediante capas
+          de operaciones matemáticas y ajusta sus parámetros para mejorar sus predicciones.
+        </p>
+
+        <p>
+          Esta combinación de matemáticas, datos y capacidad de cálculo es una de las razones
+          por las que las redes neuronales se han convertido en una herramienta fundamental
+          de la inteligencia artificial moderna.
+        </p>
+
+      </article>
+
+
+      <section class="article-references">
+
+        <h2>Referencias</h2>
+
+        <ol>
+          <li>Goodfellow, I., Bengio, Y. & Courville, A. <em>Deep Learning</em>. MIT Press.</li>
+          <li>Russell, S. & Norvig, P. <em>Artificial Intelligence: A Modern Approach</em>.</li>
+          <li>LeCun, Y., Bengio, Y. & Hinton, G. "Deep learning". <em>Nature</em>, 2015.</li>
+          <li>Rumelhart, D. E., Hinton, G. E. & Williams, R. J. "Learning representations by back-propagating errors". <em>Nature</em>, 1986.</li>
+          <li>Vaswani, A. et al. "Attention Is All You Need", 2017.</li>
+        </ol>
+
+      </section>
+
+    </div>
+
+
+    <section class="related-section">
+
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label-black">Continúa leyendo</span>
+          <h2 class="section-title">Artículos relacionados</h2>
+        </div>
+
+        <div
+          id="related-articles"
+          class="related-grid"
+          data-article-id="red-neuronal"
+        ></div>
+
+      </div>
+
+    </section>
+
+
+    <div class="article-back container">
+      <a href="../articles.html" class="btn btn-outline">
+        ← Volver a artículos
+      </a>
+    </div>
+
+  </main>
+
+
+  <footer class="site-footer" role="contentinfo">
+
+    <div class="container">
+
+      <div class="footer-bottom">
+
+        <a href="../index.html" class="logo">
+          <span class="logo-icon" aria-hidden="true"></span>
+          <span data-site-name>DISCOVERIA</span>
+        </a>
+
+        <span>
+          © 2026 <span data-site-name>DISCOVERIA</span>.
+          Divulgación científica en español.
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script src="../js/config.js"></script>
+  <script src="../js/articles.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+</html>
+```
